@@ -8,7 +8,6 @@ The scan targeted the local host (`127.0.0.1`) to identify potential vulnerabili
 - **Tool:** Nessus Essentials
 - **Scan Type:** Basic Network Scan
 - **Target:** 127.0.0.1 (Localhost)
-- **Date:** 13 August 2025
 - **Policy:** CVSS v3.0
 - **Duration:** ~8 minutes
 
@@ -41,11 +40,7 @@ The scan targeted the local host (`127.0.0.1`) to identify potential vulnerabili
      **"Microsoft network server: Digitally sign communications (always)"**
   4. Set it to **Enabled**.
   5. Restart the computer.
-- **Reference Links:**
-  - [Microsoft SMB Signing Documentation](https://technet.microsoft.com/en-us/library/cc731957.aspx)
-  - [Samba Server Signing](https://www.samba.org/samba/docs/current/man-html/smb.conf.5.html)
 
----
 
 ## **Informational Findings**
 The scan also reported **22 informational findings** such as:
@@ -54,27 +49,6 @@ The scan also reported **22 informational findings** such as:
 - Operating system fingerprinting
 
 These are not direct vulnerabilities but can be useful for attackers in reconnaissance.
-
----
-
-## **Remediation Plan**
-1. Enable **SMB Signing** to prevent MITM attacks on SMB connections.
-2. Keep Windows up-to-date with the latest security patches.
-3. Review and disable unnecessary open services.
-
----
-
-## **Screenshots**
-### Scan Summary
-![Scan Summary](screenshots/scan_summary.png)
-
-### Vulnerabilities List
-![Vulnerability List](screenshots/vulnerability_list.png)
-
-### SMB Signing Not Required (Details)
-![SMB Signing Details](screenshots/smb_signing.png)
-
----
 
 ## **Conclusion**
 The scan identified no critical or high-risk vulnerabilities, and only one medium-risk vulnerability related to SMB Signing configuration.  
